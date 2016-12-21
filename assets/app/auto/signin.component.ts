@@ -5,10 +5,10 @@ import {Validators, FormControl, FormGroup} from "@angular/forms";
     templateUrl: './signin.component.html'
 })
 
-export class SigninComponent implements OnInit{
+export class SigninComponent implements OnInit {
     myForm: FormGroup;
 
-    onSubmit(){
+    onSubmit() {
         console.log(this.myForm);
         this.myForm.reset();
     }
@@ -21,4 +21,5 @@ export class SigninComponent implements OnInit{
             ]),
             password: new FormControl(null, Validators.required),
         });
+    }
 }
