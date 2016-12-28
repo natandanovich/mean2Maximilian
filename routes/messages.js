@@ -6,7 +6,9 @@ var User = require('../models/user');
 var Message = require('../models/message');
 
 router.get('/', function (req, res, next) {
-    Message.find().exec(function (err, messages) {
+    Message.find()
+        .populate('user','firstName')
+        .exec(function (err, messages) {
         if (err) {
             return res.status(500).json({
                 title: 'An error occurred',
