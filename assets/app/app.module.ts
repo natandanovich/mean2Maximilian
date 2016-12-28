@@ -15,6 +15,8 @@ import {LogoutComponent} from "./auto/logout.component";
 import {SigninComponent} from "./auto/signin.component";
 import {SignupComponent} from "./auto/signup.component";
 import {AuthService} from "./auto/auth.service";
+import {ErrorComponent} from "./errors/error.component";
+import {ErrorService} from "./errors/error.service";
 
 @NgModule({
     declarations: [
@@ -27,9 +29,10 @@ import {AuthService} from "./auto/auth.service";
         HeaderComponent,
         LogoutComponent,
         SigninComponent,
-        SignupComponent
+        SignupComponent,
+        ErrorComponent
     ],
-    providers: [AuthService],
+    providers: [AuthService, ErrorService],
     imports: [BrowserModule, FormsModule, routing, ReactiveFormsModule, HttpModule],
     bootstrap: [AppComponent]
 })
